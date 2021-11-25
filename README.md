@@ -55,7 +55,7 @@ Just type `node index.js` to run the server.
 
 Default / Example.
 
-```json
+```js
 {
   forceCompressionType: "gzip",
   forceCompression: false,
