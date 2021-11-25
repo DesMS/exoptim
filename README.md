@@ -2,7 +2,7 @@
 
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
-[![Build Status][travis-image]][travis-url]
+[![Build Status](https://api.travis-ci.com/DesMS/exoptim.png?branch=master)](https://travis-ci.com/DesMS/exoptim)
 [![Test Coverage][coveralls-image]][coveralls-url]
 
 Nodejs compression via zlib and others.
