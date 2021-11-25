@@ -52,12 +52,50 @@ Just type `node index.js` to run the server.
 
 ## Options
 
+Default / Example.
+
 ```json
-{
-  forceCompressionType: "gzip", // gzip, deflate, br <-> brotli
-  forceCompression: false, // true, false
+exoptim({
+  forceCompressionType: "gzip",
+  forceCompression: false,
   changeSendFile: true, // true, false
   cacheControl: "no-cache", // See mozilla documentation on cache-control (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)
   flushInterval: 1500, // Number, wait in milliseconds
-}
+});
 ```
+
+### forceCompressionType
+
+Allowed Values:
+
+`gzip` - Forces the "GZip" compression type type when data is sent.  (Recommended)
+`deflate` - Forces the "Deflate" compression type type when data is sent.
+`br` <-> `brotli` - Forces the "Brotli" compression type when data is sent.
+
+(ONLY ACTIVATED IF forceCompression IS `true`)
+
+### forceCompression
+
+Allowed Values:
+
+`true` - Forces compression to be set to "forceCompressionType" value.
+`false` - Uses automatic compression.  (Recommended)
+
+### changeSendFile
+
+Allowed Values:
+
+`true` - Changes res.sendFile() command to custom command to optimize command.  (Recommended)
+`false` - Uses default res.sendFile() command.
+
+### cacheControl
+
+Allowed Values:
+
+See mozilla documentation on cache-control header (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)
+
+### flushInterval
+
+Allowed Values:
+
+Number in MS (One millisecond is 1,000 times smaller than a second)
