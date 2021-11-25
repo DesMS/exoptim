@@ -56,13 +56,13 @@ Just type `node index.js` to run the server.
 Default / Example.
 
 ```json
-exoptim({
+{
   forceCompressionType: "gzip",
   forceCompression: false,
-  changeSendFile: true, // true, false
-  cacheControl: "no-cache", // See mozilla documentation on cache-control (https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)
-  flushInterval: 1500, // Number, wait in milliseconds
-});
+  changeSendFile: true,
+  cacheControl: "no-cache",
+  flushInterval: 1500,
+}
 ```
 
 ### forceCompressionType
