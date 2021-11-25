@@ -1,9 +1,7 @@
 # EXOptim
 
-[![NPM Version][npm-image]][npm-url]
-[![NPM Downloads][downloads-image]][downloads-url]
+[![NPM Version](https://img.shields.io/node/v/[exoptim].svg?style=flat)](http://nodejs.org/download/)
 [![Build Status](https://api.travis-ci.com/DesMS/exoptim.png?branch=master)](https://travis-ci.com/DesMS/exoptim)
-[![Test Coverage][coveralls-image]][coveralls-url]
 
 Nodejs compression via zlib and others.
 
