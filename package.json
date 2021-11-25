@@ -1,11 +1,14 @@
 {
   "name": "exoptim",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Optimizes Express",
   "main": "index.js",
   "scripts": {
     "test": "node test.js",
     "test_normal": "node test_normal.js"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "repository": {
     "type": "git",
