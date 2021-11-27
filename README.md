@@ -4,6 +4,16 @@
 
 Nodejs compression via zlib and others.
 
+## Changlog
+
+### V0.0.8
+
+Added Changelog
+
+Fixed bug with res.send() being changed for nothing
+
+Added error callback to res.sendFile()
+
 ## Installation
 
 index.js:
