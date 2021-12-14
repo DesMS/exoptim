@@ -1,18 +1,18 @@
+(Developer Build, updates every run)
+
 # EXOptim
 
 [![https://nodei.co/npm/exoptim.png?downloads=true&downloadRank=true&stars=true](https://nodei.co/npm/exoptim.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/exoptim)
 
-Nodejs compression via zlib and others.
+Nodejs compression via zlib and others with other useful features.
+
+(It is recommended to change express.static() to exoptim.static())
 
 ## Changlog
 
-### V0.0.8
+### V0.0.11
 
-Added Changelog
-
-Fixed bug with res.send() being changed for nothing
-
-Added error callback to res.sendFile()
+Releasing next update (With compressed files)
 
 ## Installation
 
@@ -73,7 +73,9 @@ Default / Example.
 Allowed Values:
 
 `gzip` - Forces the "GZip" compression type type when data is sent.  (Recommended)
+
 `deflate` - Forces the "Deflate" compression type type when data is sent.
+
 `br` <-> `brotli` - Forces the "Brotli" compression type when data is sent.
 
 (ONLY ACTIVATED IF forceCompression IS `true`)
@@ -83,6 +85,7 @@ Allowed Values:
 Allowed Values:
 
 `true` - Forces compression to be set to "forceCompressionType" value.
+
 `false` - Uses automatic compression.  (Recommended)
 
 ### changeSendFile
@@ -90,6 +93,7 @@ Allowed Values:
 Allowed Values:
 
 `true` - Changes res.sendFile() command to custom command to optimize command.  (Recommended)
+
 `false` - Uses default res.sendFile() command.
 
 ### cacheControl
@@ -103,3 +107,61 @@ See mozilla documentation on cache-control header (https://developer.mozilla.org
 Allowed Values:
 
 Number in MS (One millisecond is 1,000 times smaller than a second)
+
+### changeExIp
+
+Allowed Values:
+
+`true` - Changes the value of `req.exip` to the users ip value or array stated in `options.returnMultiIp` (Recommended)
+
+`false` - Disables the changing of `req.exip`
+
+### returnMultiIp
+
+Allowed Values:
+
+`true` - Returns an array instead of a string (Includes all ips instead of first ip)
+
+`false` - Returns first ip (Recommended)
+
+### returnIpType
+
+Allowed Values:
+
+`ipv4` - Returns on ipv4 addresses (Recommended)
+
+`ipv6` - Returns only ipv6 addresses
+
+`both` - Returns both ip values into array, or if disable, checks every ip
+
+### flush
+
+Allowed Values:
+
+`true`: Flushes the headers every flushInterval ms (Recommended)
+
+`false`: Don't flush the headers
+
+### minCompression
+
+Allowed Values:
+
+Number in bytes, `1000` is 1 kilobyte, `1000 * 1000` is 1 megabyte, `1000 * 1000 * 1000` is 1 gigabyte (10 is recommended)
+
+### autoType
+
+Allowed Values:
+
+`true`: Automatically sets the res.type (Recommended)
+
+`false`: Leaves res.type blank
+
+## secure
+
+Allowed Values:
+
+`true`: Uses best options
+
+`false`: Disables secure
+
+`{}`: Comming Soon, will default to `true`
