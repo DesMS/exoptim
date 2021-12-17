@@ -10,9 +10,7 @@ Nodejs compression via zlib and others with other useful features.
 
 ### V0.0.11
 
-Next update is release
-
-Decreased Build Size
+Releasing next update (With compressed files)
 
 ## Installation
 

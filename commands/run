@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+export DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
+export CURLOC=$DIR
+cd $LOC/../
+
+npm test
+
+cd $CURLOC

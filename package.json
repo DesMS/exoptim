@@ -2,12 +2,11 @@
   "name": "exoptim",
   "version": "0.0.10",
   "description": "Optimizes Express",
-  "main": "./src/index.js",
-  "scripts": {
-    "test": "node ./tests/test.js",
-    "test_normal": "node ./tests/test_normal.js",
-    "test_require": "node ./tests/test_require.js"
-  },
+  "main": "./build/index.js",
+  "files": [
+    "/build"
+  ],
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DesMS/exoptim.git"
@@ -21,9 +20,9 @@
     "app",
     "api",
     "optimization",
-		"util",
-		"utils",
-		"customizeable"
+    "util",
+    "utils",
+    "customizeable"
   ],
   "author": "804k/8O4k",
   "license": "UNLICENSED",
@@ -33,7 +32,8 @@
   "homepage": "https://replit.com/@8O4k/exoptim#README.md",
   "dependencies": {},
   "devDependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "javascript-obfuscator": "^3.0.0"
   },
   "directories": {
     "test": "tests"

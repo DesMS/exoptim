@@ -1,1 +1,1 @@
-run="cd ./tests & npm test"
+run="bash ./main.sh"

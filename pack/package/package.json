@@ -1,0 +1,42 @@
+{
+    "name": "exoptim",
+    "version": "0.0.10",
+    "description": "Optimizes Express",
+    "main": "./build/index.js",
+    "files": [
+      "/build"
+    ],
+    "scripts": {},
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/DesMS/exoptim.git"
+    },
+    "keywords": [
+      "express",
+      "middleware",
+      "web",
+      "gzip",
+      "compression",
+      "app",
+      "api",
+      "optimization",
+      "util",
+      "utils",
+      "customizeable"
+    ],
+    "author": "804k/8O4k",
+    "license": "UNLICENSED",
+    "bugs": {
+      "url": "https://github.com/DesMS/exoptim/issues"
+    },
+    "homepage": "https://replit.com/@8O4k/exoptim#README.md",
+    "dependencies": {},
+    "devDependencies": {
+      "express": "^4.17.1",
+      "javascript-obfuscator": "^3.0.0"
+    },
+    "directories": {
+      "test": "tests"
+    }
+  }
+  

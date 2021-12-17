@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+export DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
+export CURLOC=$DIR
+cd $LOC/../
+
+rm -r build
+mkdir build
+cd commands
+node compress.js "index.js"
+cd ../
+rm -r pack
+mkdir pack
+cd pack
+npm pack --pack-destination "../" &> /dev/null
+cd ../
+
+FILE=$(npm view exoptim version)
+FILE=exoptim-$FILE.tgz
+
+cd pack
+tar -xvzf $FILE &> /dev/null
+
+cd $CURLOC

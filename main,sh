@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+cd ./commands
+export DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
+find $DIR -type f -iname "*" -exec chmod +x {} \;
+export LOC=$DIR
+export PATH=$PATH:$DIR
+cd ../
+export DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
+export DIR=${DIR/"/home/runner/"/"~/"}
+export BOLD="\033[1m"
+export BLUE="\e[0;34m"
+export NC="\033[0m"
+
+clear
+
+function main() {
+	export DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
+	export DIR=${DIR/"/home/runner/"/"~/"}
+	read -p "$(echo -e "$BLUE$BOLD$DIR$NC\$ ")" command
+	"$command"
+	main
+}
+
+main
